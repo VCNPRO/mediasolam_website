@@ -80,18 +80,12 @@ export function AppPageLayout({
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 {accessUrl !== '#' ? (
-                  <Link href={accessUrl} passHref>
-                    <Button
-                      as="a"
-                      size="lg"
-                      className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow group`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <Button asChild size="lg" className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow group`}>
+                    <Link href={accessUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-5 w-5" />
                       Acceder a la Aplicación
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 ) : (
                   <Button
                     size="lg"
@@ -240,18 +234,12 @@ export function AppPageLayout({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               {accessUrl !== '#' ? (
-                <Link href={accessUrl} passHref>
-                  <Button
-                    as="a"
-                    size="lg"
-                    className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <Button asChild size="lg" className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow`}>
+                  <Link href={accessUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-5 w-5" />
                     Comenzar Ahora
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               ) : (
                 <Button 
                   size="lg" 
