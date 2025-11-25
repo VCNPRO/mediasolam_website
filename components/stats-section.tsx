@@ -80,7 +80,7 @@ export function StatsSection() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-            MediaSolam en{' '}
+            mediasolam en{' '}
             <span className="gradient-tech bg-clip-text text-transparent">Números</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

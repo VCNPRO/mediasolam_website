@@ -14,7 +14,7 @@ export function Footer() {
                 <Bot className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold gradient-primary bg-clip-text text-transparent">
-                MediaSolam
+                mediasolam
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -58,7 +58,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © 2024 MediaSolam - videoconversion media lab, s.l. Todos los derechos reservados.
+              © 2024 mediasolam - videoconversion media lab, s.l. Todos los derechos reservados.
             </p>
             <p className="text-sm text-muted-foreground">
               www.mediasolam.eu

@@ -55,7 +55,7 @@ export function FeaturesSection() {
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
             ¿Por qué elegir{' '}
-            <span className="gradient-primary bg-clip-text text-transparent">MediaSolam</span>?
+            <span className="gradient-primary bg-clip-text text-transparent">mediasolam</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Nuestras soluciones de IA están diseñadas específicamente para profesionales del sector audiovisual

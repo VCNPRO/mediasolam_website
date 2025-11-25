@@ -13,20 +13,26 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
-import { Menu, X, Bot, Cpu, FileText, Video, Image, Headphones, Scroll, Database } from 'lucide-react'
+import { Menu, X, Bot, Cpu, FileText, Video, Image, Scroll, Database } from 'lucide-react'
 
 const apps = [
-  {
-    name: 'annalysis-media',
-    description: 'Análisis profesional de vídeo con IA',
-    icon: Video,
-    href: '/apps/annalysis-media'
-  },
   {
     name: 'annalogica',
     description: 'Transcripción y análisis de contenidos',
     icon: Bot,
     href: '/apps/annalogica'
+  },
+  {
+    name: 'verbadoc-enterprise',
+    description: 'Extractor de datos de alto volumen',
+    icon: Database,
+    href: '/apps/verbadoc-enterprise'
+  },
+  {
+    name: 'verbadoc-europa',
+    description: 'Extractor de datos empresariales',
+    icon: Database,
+    href: '/apps/verbadoc-europa'
   },
   {
     name: 'verbadoc-salud',
@@ -35,10 +41,10 @@ const apps = [
     href: '/apps/verbadoc-salud'
   },
   {
-    name: 'verbadoc-europa',
-    description: 'Extractor de datos empresariales',
-    icon: Database,
-    href: '/apps/verbadoc-europa'
+    name: 'scriptoriumAI',
+    description: 'Búsqueda inteligente y gestión documental',
+    icon: Scroll,
+    href: '/apps/scriptoriumAI'
   },
   {
     name: 'annamets',
@@ -53,16 +59,10 @@ const apps = [
     href: '/apps/media-enhancer'
   },
   {
-    name: 'audiovision pro',
-    description: 'Creación de vídeos con IA',
-    icon: Headphones,
-    href: '/apps/audiovision-pro'
-  },
-  {
-    name: 'scriptorium',
-    description: 'Análisis de documentos históricos',
-    icon: Scroll,
-    href: '/apps/scriptorium'
+    name: 'annalysis-media',
+    description: 'Análisis profesional de vídeo con IA',
+    icon: Video,
+    href: '/apps/annalysis-media'
   }
 ]
 
@@ -79,7 +79,7 @@ export function Navigation() {
               <Bot className="h-5 w-5 text-white" />
             </div>
             <span className="text-xl font-bold gradient-primary bg-clip-text text-transparent">
-              MediaSolam
+              mediasolam
             </span>
           </Link>
 

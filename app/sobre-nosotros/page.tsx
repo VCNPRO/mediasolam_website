@@ -31,11 +31,11 @@ export default function AboutPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
               Sobre{' '}
               <span className="gradient-primary bg-clip-text text-transparent">
-                MediaSolam
+                mediasolam
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              MediaSolam es un espacio donde se encuentran todas las apps desarrolladas por nuestro equipo, 
+              mediasolam es un espacio donde se encuentran todas las apps desarrolladas por nuestro equipo, 
               para que las puedas conocer y aprovechar al máximo en tus proyectos profesionales.
             </p>
           </motion.div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold">videoconversion media lab, s.l.</h3>
               </div>
               <p className="text-muted-foreground">
-                MediaSolam es desarrollado por <strong>videoconversion media lab, s.l.</strong>, 
+                mediasolam es desarrollado por <strong>videoconversion media lab, s.l.</strong>, 
                 una empresa especializada en tecnologías de conversión y análisis de medios audiovisuales 
                 con sede en Barcelona, España.
               </p>

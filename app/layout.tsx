@@ -13,21 +13,21 @@ export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
-  title: 'MediaSolam - Soluciones IA para Medios Audiovisuales',
-  description: 'MediaSolam es un espacio donde se encuentran todas las apps desarrolladas por nuestro equipo de IA para el sector audiovisual y documental.',
+  title: 'mediasolam - Soluciones IA para Medios Audiovisuales',
+  description: 'mediasolam es un espacio donde se encuentran todas las apps desarrolladas por nuestro equipo de IA para el sector audiovisual y documental.',
   keywords: 'IA, inteligencia artificial, medios audiovisuales, análisis de video, transcripción, documentos, archivos digitales',
-  authors: [{ name: 'MediaSolam Team' }],
+  authors: [{ name: 'mediasolam Team' }],
   openGraph: {
-    title: 'MediaSolam - Soluciones IA para Medios Audiovisuales',
+    title: 'mediasolam - Soluciones IA para Medios Audiovisuales',
     description: 'Descubre nuestras 8 aplicaciones de IA para el análisis de medios, transcripción y gestión de archivos audiovisuales.',
     url: 'https://www.mediasolam.eu',
-    siteName: 'MediaSolam',
+    siteName: 'mediasolam',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'MediaSolam - Soluciones IA para Medios Audiovisuales',
+        alt: 'mediasolam - Soluciones IA para Medios Audiovisuales',
       },
     ],
     locale: 'es_ES',

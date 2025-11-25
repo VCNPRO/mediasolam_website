@@ -47,7 +47,7 @@ export function HeroSection() {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              MediaSolam es un espacio donde se encuentran todas las apps desarrolladas por nuestro equipo, 
+              mediasolam es un espacio donde se encuentran todas las apps desarrolladas por nuestro equipo, 
               para que las puedas conocer y utilizar en tus proyectos profesionales.
             </p>
           </motion.div>

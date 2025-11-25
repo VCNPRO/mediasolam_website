@@ -4,19 +4,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Button } from '@/components/ui/button'
-import { Video, Bot, FileText, Database, Cpu, Image, Headphones, Scroll } from 'lucide-react'
+import { Video, Bot, FileText, Database, Cpu, Image, Scroll } from 'lucide-react'
 import Link from 'next/link'
 
 const apps = [
-  {
-    id: 'annalysis-media',
-    name: 'annalysis-media',
-    title: 'Análisis Profesional de Vídeo',
-    description: 'Plataforma profesional de análisis de vídeo impulsada por IA. Analiza vídeos con tecnología de vanguardia, extrae metadatos, transcribe audio, detecta objetos y exporta resultados en múltiples formatos profesionales.',
-    icon: Video,
-    color: 'from-blue-500 to-purple-600',
-    features: ['Extracción de metadatos', 'Transcripción automática', 'Detección de objetos']
-  },
   {
     id: 'annalogica',
     name: 'annalogica',
@@ -25,6 +16,24 @@ const apps = [
     icon: Bot,
     color: 'from-green-500 to-teal-600',
     features: ['Transcripción AI', 'Análisis de contenido', 'Gestión inteligente']
+  },
+  {
+    id: 'verbadoc-enterprise',
+    name: 'verbadoc-enterprise',
+    title: 'Extractor de Datos de Alto Volumen',
+    description: 'Solución empresarial para extracción masiva de datos con agente de IA incorporado. Procesa grandes volúmenes de documentos con precisión y velocidad.',
+    icon: Database,
+    color: 'from-indigo-500 to-blue-600',
+    features: ['Agente IA incorporado', 'Extracción automatizada', 'Múltiples formatos', 'Análisis empresarial']
+  },
+  {
+    id: 'verbadoc-europa',
+    name: 'verbadoc-europa',
+    title: 'Extractor de Datos',
+    description: 'Aprende a usar el Extractor de Datos para departamento de todo tipo, en especial, departamentos contabilidad, finanzas, marketing, legal y cualquiera que pueda necesitar extraer datos de cualquier documento o imagen con datos.',
+    icon: Database,
+    color: 'from-yellow-500 to-orange-600',
+    features: ['Extracción automatizada', 'Múltiples formatos', 'Análisis empresarial']
   },
   {
     id: 'verbadoc-salud',
@@ -36,13 +45,13 @@ const apps = [
     features: ['Plantillas médicas', 'Informes automatizados', 'Cumplimiento normativo']
   },
   {
-    id: 'verbadoc-europa',
-    name: 'verbadoc-europa',
+    id: 'scriptoriumAI',
+    name: 'scriptoriumAI',
     title: 'Extractor de Datos',
-    description: 'Aprende a usar el Extractor de Datos para departamento de todo tipo, en especial, departamentos contabilidad, finanzas, marketing, legal y cualquiera que pueda necesitar extraer datos de cualquier documento o imagen con datos.',
-    icon: Database,
-    color: 'from-yellow-500 to-orange-600',
-    features: ['Extracción automatizada', 'Múltiples formatos', 'Análisis empresarial']
+    description: 'Sistema avanzado de búsqueda inteligente y gestión documental de alto nivel. Accede a millones de datos bibliográficos con tecnología de IA.',
+    icon: Scroll,
+    color: 'from-amber-500 to-yellow-600',
+    features: ['Búsqueda inteligente', 'Millones de datos bibliográficos', 'Gestión documental de alto nivel']
   },
   {
     id: 'annamets',
@@ -63,22 +72,13 @@ const apps = [
     features: ['Digitalización VHS', 'Mejora con IA', 'Editor profesional']
   },
   {
-    id: 'audiovision-pro',
-    name: 'audiovision pro',
-    title: 'Creador de Vídeos',
-    description: 'Proporciona el audio, la imagen y los subtítulos opcionales para crear tu video.',
-    icon: Headphones,
-    color: 'from-pink-500 to-rose-600',
-    features: ['Creación automática', 'Subtítulos integrados', 'Producción IA']
-  },
-  {
-    id: 'scriptorium',
-    name: 'scriptorium',
-    title: 'Análisis de Documentos Históricos',
-    description: 'Tecnologías avanzadas de IA para el análisis profundo de documentos históricos.',
-    icon: Scroll,
-    color: 'from-amber-500 to-yellow-600',
-    features: ['OCR avanzado', 'Análisis histórico', 'Preservación digital']
+    id: 'annalysis-media',
+    name: 'annalysis-media',
+    title: 'Análisis Profesional de Vídeo',
+    description: 'Plataforma profesional de análisis de vídeo impulsada por IA. Analiza vídeos con tecnología de vanguardia, extrae metadatos, transcribe audio, detecta objetos y exporta resultados en múltiples formatos profesionales.',
+    icon: Video,
+    color: 'from-blue-500 to-purple-600',
+    features: ['Extracción de metadatos', 'Transcripción automática', 'Detección de objetos']
   }
 ]
 
@@ -116,33 +116,35 @@ export function AppsGrid() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group glass-card p-8 rounded-3xl hover:bg-accent/10 transition-all duration-200 tech-glow"
+                className="group glass-card p-8 rounded-3xl hover:bg-accent/10 transition-all duration-200 tech-glow flex flex-col"
               >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${app.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <Icon className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">{app.title}</h3>
-                    <div className="text-sm text-muted-foreground font-mono bg-muted/50 px-2 py-1 rounded">
-                      {app.name}
+                <div className="flex-1">
+                  <div className="flex items-start space-x-4 mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${app.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <Icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold mb-2">{app.title}</h3>
+                      <div className="text-sm text-muted-foreground font-mono bg-muted/50 px-2 py-1 rounded">
+                        {app.name}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {app.description}
-                </p>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {app.description}
+                  </p>
 
-                <div className="space-y-4 mb-8">
-                  <h4 className="text-sm font-semibold text-primary">Características principales:</h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    {app.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        <span className="text-sm text-muted-foreground">{feature}</span>
-                      </div>
-                    ))}
+                  <div className="space-y-4 mb-8">
+                    <h4 className="text-sm font-semibold text-primary">Características principales:</h4>
+                    <div className="grid grid-cols-1 gap-2">
+                      {app.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-2">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                          <span className="text-sm text-muted-foreground">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
