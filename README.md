@@ -50,3 +50,5 @@ Visita [www.mediasolam.eu](https://www.mediasolam.eu)
 ---
 
 © 2025 MediaSolam. Todos los derechos reservados.
+
+<!-- Trigger Vercel deployment -->
