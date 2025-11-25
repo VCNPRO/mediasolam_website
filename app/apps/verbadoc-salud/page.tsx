@@ -53,7 +53,7 @@ export default function VerbadocSaludPage() {
       features={features}
       instructions={instructions}
       useCases={useCases}
-      accessUrl="#"
+      accessUrl="https://verbadocsalud.eu"
     />
   )
 }

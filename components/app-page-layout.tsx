@@ -79,15 +79,30 @@ export function AppPageLayout({
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button 
-                  size="lg" 
-                  className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow group`}
-                  onClick={() => alert(`La aplicación ${appName} estará disponible próximamente. Te notificaremos cuando esté lista para usar.`)}
-                >
-                  <ExternalLink className="mr-2 h-5 w-5" />
-                  Acceder a la Aplicación
-                  <span className="ml-2 text-xs opacity-75">(Próximamente)</span>
-                </Button>
+                {accessUrl !== '#' ? (
+                  <Link href={accessUrl} passHref>
+                    <Button
+                      as="a"
+                      size="lg"
+                      className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow group`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="mr-2 h-5 w-5" />
+                      Acceder a la Aplicación
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button
+                    size="lg"
+                    className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow group`}
+                    onClick={() => alert(`La aplicación ${appName} estará disponible próximamente. Te notificaremos cuando esté lista para usar.`)}
+                  >
+                    <ExternalLink className="mr-2 h-5 w-5" />
+                    Acceder a la Aplicación
+                    <span className="ml-2 text-xs opacity-75">(Próximamente)</span>
+                  </Button>
+                )}
                 <Button 
                   size="lg" 
                   variant="outline" 
@@ -224,15 +239,30 @@ export function AppPageLayout({
               Accede a {appName} y transforma tu flujo de trabajo con IA
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow`}
-                onClick={() => alert(`¡Gracias por tu interés en ${appName}! La aplicación estará disponible próximamente. Te contactaremos cuando esté lista.`)}
-              >
-                <ExternalLink className="mr-2 h-5 w-5" />
-                Comenzar Ahora
-                <span className="ml-2 text-xs opacity-75">(Próximamente)</span>
-              </Button>
+              {accessUrl !== '#' ? (
+                <Link href={accessUrl} passHref>
+                  <Button
+                    as="a"
+                    size="lg"
+                    className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="mr-2 h-5 w-5" />
+                    Comenzar Ahora
+                  </Button>
+                </Link>
+              ) : (
+                <Button 
+                  size="lg" 
+                  className={`bg-gradient-to-r ${color} text-white hover:opacity-90 tech-glow`}
+                  onClick={() => alert(`¡Gracias por tu interés en ${appName}! La aplicación estará disponible próximamente. Te contactaremos cuando esté lista.`)}
+                >
+                  <ExternalLink className="mr-2 h-5 w-5" />
+                  Comenzar Ahora
+                  <span className="ml-2 text-xs opacity-75">(Próximamente)</span>
+                </Button>
+              )}
               <Link href="/contacto">
                 <Button size="lg" variant="outline" className="glass-card hover:bg-accent/50">
                   Contactar para Más Información

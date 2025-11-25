@@ -53,7 +53,7 @@ export default function AnalysisMediaPage() {
       features={features}
       instructions={instructions}
       useCases={useCases}
-      accessUrl="#"
+      accessUrl="https://annalysismedia.eu"
     />
   )
 }

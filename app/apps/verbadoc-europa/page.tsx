@@ -53,7 +53,7 @@ export default function VerbadocEuropaPage() {
       features={features}
       instructions={instructions}
       useCases={useCases}
-      accessUrl="#"
+      accessUrl="https://verbadoc.eu"
     />
   )
 }

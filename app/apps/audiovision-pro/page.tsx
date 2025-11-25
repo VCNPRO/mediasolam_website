@@ -53,7 +53,7 @@ export default function AudiovisionProPage() {
       features={features}
       instructions={instructions}
       useCases={useCases}
-      accessUrl="#"
+      accessUrl="https://verbadocpro.eu"
     />
   )
 }

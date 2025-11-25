@@ -53,7 +53,7 @@ export default function AnnalogicaPage() {
       features={features}
       instructions={instructions}
       useCases={useCases}
-      accessUrl="#"
+      accessUrl="https://annalogica.eu"
     />
   )
 }

@@ -53,7 +53,7 @@ export default function ScriptoriumPage() {
       features={features}
       instructions={instructions}
       useCases={useCases}
-      accessUrl="#"
+      accessUrl="https://scriptorium-ai.vercel.app"
     />
   )
 }
