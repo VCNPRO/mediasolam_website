@@ -53,7 +53,7 @@ export default function AnnaMetsPage() {
       features={features}
       instructions={instructions}
       useCases={useCases}
-      accessUrl="https://annnamets.eu"
+      accessUrl="https://annamets.eu"
     />
   )
 }
